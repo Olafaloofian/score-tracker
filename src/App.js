@@ -12,9 +12,23 @@ componentDidMount() {
   // Dummy data
   sessionStorage.setItem('events', JSON.stringify([{eventName: "Smash", defaultPoints: "10", pointValues: ["1", "2", "3", "4"]}, {eventName: "Trash Toss", defaultPoints: "10", pointValues: ["1", "2", "3", "4"]}]))
   sessionStorage.setItem('participants', JSON.stringify([{name: "Freeps", score: 0}, {name: "Greeps", score: 0}, {name: "Woking", score: 0}, {name: "Kony", score: 0}, {name: "Tofers", score: 0}, {name: "Zambit", score: 0}, {name: "Teenaw", score: 0}, {name: "Krintle", score: 0}]))
-  // sessionStorage.setItem('events', JSON.stringify([]))
+  sessionStorage.setItem('scores', JSON.stringify([
+  {eventName: "Smash", 
+  defaultPoints: "10", 
+  pointValues: ["1", "2", "3", "4"],
+  contenders: ["Freeps", "Woking", "Tofers", "Greeps"],
+  participants: ["Zambit", "Krintle"],
+  pointValues: ["1", "2", "3", "4"]}, 
+  {eventName: "Trash Bin Toss", 
+  defaultPoints: "10", 
+  pointValues: ["1", "2", "3", "4"],
+  contenders: ["Woking", "Freeps", "Tofers","Krintle"],
+  participants: ["Zambit", "Greeps"],
+  pointValues: ["1", "2", "3", "4"]}]
+  ))
+
+    // sessionStorage.setItem('events', JSON.stringify([]))
   // sessionStorage.setItem('participants', JSON.stringify([]))
-  sessionStorage.setItem('scores', JSON.stringify([]))
 }
 
   render() {
